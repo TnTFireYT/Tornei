@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifica</title>
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f3f2f2;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Classifica</h2>
+
+<div style="display: flex; align-items: flex-start; gap: 40px; padding: 20px;">
+ <table id="classifica">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Squadra</th>
+      <th>PT</th>
+      <th>PG</th>
+      <th>V</th>
+      <th>S</th>
+      <th>P</th>
+      <th>GF</th>
+      <th>GS</th>
+      <th>DR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td></td><td>A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>B</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>C</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>D</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>E</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>F</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>G</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td></td><td>H</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+  </tbody>
+</table>
+
+ <aside style="width: 300px; border-left: 2px solid #ccc; padding-left: 20px;">
+        <h3>Giocatori e Squadre</h3>
+        <ul id="sidebar-list" style="list-style: none; padding: 0;">
+            <li>
+                <strong>Torz</strong><br>
+                Squadra: <em>A</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+            <li>
+                <strong>Stefano</strong><br>
+                Squadra: <em>B</em> <span class="stars" data-rating="4.5"></span>
+            </li>
+			<li>
+                <strong>Christian</strong><br>
+                Squadra: <em>C</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+			<li>
+                <strong>Marcolino</strong><br>
+                Squadra: <em>D</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+			<li>
+                <strong>Pasquale</strong><br>
+                Squadra: <em>E</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+			<li>
+                <strong>Latini</strong><br>
+                Squadra: <em>F</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+			<li>
+                <strong>Daniel</strong><br>
+                Squadra: <em>G</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+			<li>
+                <strong>Pinto</strong><br>
+                Squadra: <em>H</em> <span class="stars" data-rating="1.5"></span>
+            </li>
+            <!-- Aggiungi altri giocatori qui -->
+        </ul>
+    </aside>
+</div>
+
+<section style="margin-top: 60px; padding: 20px; background-color: #f9f9f9; border-top: 2px solid #ccc;">
+    <h3>Partite Giocate</h3>
+    <div id="match-results" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
+        
+        <a href="partita1.html" style="text-decoration: none; color: inherit;">
+            <div style="padding: 10px 16px; border: 1px solid #ddd; border-radius: 8px; background: #fff; white-space: nowrap;">
+                <strong>[ A ]</strong> 1 - 2 <strong>[ B ]</strong>
+            </div>
+        </a>
+
+        <a href="partita2.html" style="text-decoration: none; color: inherit;">
+            <div style="padding: 10px 16px; border: 1px solid #ddd; border-radius: 8px; background: #fff; white-space: nowrap;">
+                <strong>[ B ]</strong> 3 - 3 <strong>[ A ]</strong>
+            </div>
+        </a>
+
+        <a href="partita3.html" style="text-decoration: none; color: inherit;">
+            <div style="padding: 10px 16px; border: 1px solid #ddd; border-radius: 8px; background: #fff; white-space: nowrap;">
+                <strong>[ A ]</strong> 0 - 1 <strong>[ B ]</strong>
+            </div>
+        </a>
+
+        <!-- Aggiungi altri link-partita qui -->
+    </div>
+</section>
+
+
+
+    <button onclick="exportAsPNG()">Esporta come PNG</button>
+    <button onclick="exportAsPDF()">Esporta come PDF</button>
+
+	<script>
+  function sortClassifica() {
+    const table = document.getElementById("classifica").getElementsByTagName("tbody")[0];
+    const rows = Array.from(table.rows);
+
+    rows.sort((a, b) => {
+      const getValue = (row, index) => {
+        const value = row.cells[index].innerText;
+        return isNaN(value) ? value : parseInt(value, 10);
+      };
+
+      const teamA = a.cells[1].innerText;
+      const teamB = b.cells[1].innerText;
+
+      const ptsA = getValue(a, 2);
+      const ptsB = getValue(b, 2);
+      if (ptsA !== ptsB) return ptsB - ptsA;
+
+      const pgA = getValue(a, 3);
+      const pgB = getValue(b, 3);
+      if (pgA !== pgB) return pgA - pgB;
+
+      const vA = getValue(a, 4);
+      const vB = getValue(b, 4);
+      if (vA !== vB) return vB - vA;
+
+      const drA = getValue(a, 9);
+      const drB = getValue(b, 9);
+      if (drA !== drB) return drB - drA;
+
+      const grA = getValue(a, 7);
+      const grB = getValue(b, 7);
+      if (grA !== grB) return grB - grA;
+
+      return teamA.localeCompare(teamB);
+    });
+
+    rows.forEach((row, index) => {
+      row.cells[0].innerText = index + 1;
+      table.appendChild(row);
+    });
+  }
+
+  sortClassifica();
+	</script>
+
+    <!-- Librerie per esportazione -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Script per esportare -->
+    <script>
+        function exportAsPNG() {
+            const table = document.getElementById("classifica");
+            html2canvas(table).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'classifica.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+
+        async function exportAsPDF() {
+            const { jsPDF } = window.jspdf;
+            const table = document.getElementById("classifica");
+
+            html2canvas(table).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF();
+
+                const pageWidth = pdf.internal.pageSize.getWidth();
+                const imgProps = pdf.getImageProperties(imgData);
+                const imgWidth = pageWidth - 20;
+                const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+
+                pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+                pdf.save('classifica.pdf');
+            });
+        }
+    </script>
+	<script>
+    document.querySelectorAll('.stars').forEach(starSpan => {
+        const rating = parseFloat(starSpan.dataset.rating) || 0;
+        const fullStars = Math.floor(rating);
+        const halfStar = (rating % 1) >= 0.5 ? 1 : 0;
+        const emptyStars = 5 - fullStars - halfStar;
+
+        let starHTML = '★'.repeat(fullStars);
+        if (halfStar) starHTML += '⯪';  // Simbolo simile a mezza stella
+        starHTML += '☆'.repeat(emptyStars);
+
+        starSpan.textContent = starHTML;
+    });
+	</script>
+
+
+
+
+</body>
+</html>
